@@ -35,7 +35,7 @@
   tags: ['skip_ansible_galaxy']
 
 - name: Configure replication on the slave.
-  mysql_replication:
+  mysql_replication:  # noqa ignore-errors
     mode: changemaster
     master_host: "{{ mysql_replication_master }}"
     master_user: "{{ mysql_replication_user.name }}"
